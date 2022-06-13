@@ -1,0 +1,31 @@
+.pill {
+  color: lightslategray;
+  &:hover {
+    color: #ffb224;
+  }
+}
+
+.pill.active {
+  background-color: #ffb224 !important;
+}
+
+.card-booking {
+  border-radius: 8px;
+  h2 {
+    font-size: 32px !important;
+    margin: 0;
+  }
+  .card-booking-img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.active.grid-card {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 100px;
+}

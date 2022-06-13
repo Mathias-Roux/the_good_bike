@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <nav class="nav my-4">
+        <a class="nav-item pill nav-link active" href="#p1" data-toggle="tab">Dashboard</a>
+        <%= link_to "My bikes", owner_bikes_path, class: "nav-item pill nav-link" %>
+        <%= link_to "My bookings", bookings_path, class: "nav-item pill nav-link" %>
+        <%= link_to "Manage my bookings", owner_bookings_path, class: "nav-item pill nav-link" %>
+      </nav>
+      <div class="tab-content">
+        <div class="tab-pane active" id="p1">
+          <h2>
+            <%= image_tag "https://mystickermania.com/cdn/stickers/cartoons/sticker_5031-512x512.png?t=09102020", id: "profile-avatar"%>
+            Welcome <%= current_user.first_name %>
+          </h2>
+          <div id="dashboard-infos" class="container">
+            <div class="row">
+              <ul id="dashboard-infos col">
+                <li class="li-profile">First name : <div class="profile-datas"><span><%= current_user.first_name%></span></div></li>
+                <li class="li-profile">Last name : <div class="profile-datas"><span><%= current_user.last_name%></span></div></li>
+                <li class="li-profile">E-mail : <div class="profile-datas"><span><%= current_user.email%></span></div></li>
+                <li class="li-profile">Password : <div class="profile-datas"><span>*******</span></div></li>
+                <li class="li-profile">Profile created : <div class="profile-datas"><span><%= current_user.created_at%></span></div></li>
+              </ul>
+              <div class="col">
+                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bdsthrsj.json"  background="transparent"  speed="1"  style="height: 400px;"  loop  autoplay></lottie-player>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="p2">
+
+        </div>
+        <div class="tab-pane" id="p3">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
